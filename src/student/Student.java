@@ -18,12 +18,24 @@ public class Student {
    {
        
    }
-    public Student(String studentID,String name)
+    public Student(String id,String sname)
    {
-       this.studentID=studentID;
-       this.name=name;
+       this.studentID=id;
+       this.name=sname;
    }
-
+   public void addQuiz(int score)
+    {
+        if(score>= 0 && score <= 10)
+        {
+             totalQuizScore+=score ;
+              numOfQuizTake++;
+            
+        }
+        else
+        {
+           System.out.println("Invalid score!");
+        }
+    }
     public String getStudentID() {
         return studentID;
     }
@@ -40,32 +52,21 @@ public class Student {
         return totalQuizScore;
     }
 
-    public void setStudentID(String studentID) {
-        this.studentID = studentID;
+    public void setStudentID(String id) {
+        studentID = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String sname) {
+        name = sname;
     }
 
-    public void setNumOfQuizTake(int numOfQuizTake) {
-        this.numOfQuizTake = numOfQuizTake;
-    }
-
-    public void setTotalQuizScore(int totalQuizScore) {
-        this.totalQuizScore = totalQuizScore;
-    }
+  
    
-    public int addQuiz(int score)
-    {
-       totalQuizScore= score * numOfQuizTake;
-       
-       return totalQuizScore;
-    }
-    public int getAverageScore()
+ 
+    public double getAverageScore()
     {
         
-        return totalQuizScore/numOfQuizTake;
+        return totalQuizScore/(double)numOfQuizTake;
     }
     
     public static void main(String[] args) {
