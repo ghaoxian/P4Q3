@@ -13,15 +13,20 @@ public class Student {
    private String name;
    private int numOfQuizTake;
    private int totalQuizScore;
-   
+   public static double contribution;
    public Student()
    {
-       
+       this("","");
    }
-    public Student(String id,String sname)
+   // public Student(String id,String sname)
+   //{
+   //    studentID=id;
+   //    name=sname;
+  // }
+    public Student(String studentID,String name)
    {
-       this.studentID=id;
-       this.name=sname;
+       this.studentID=studentID;
+       this.name=name;
    }
    public void addQuiz(int score)
     {
@@ -36,6 +41,14 @@ public class Student {
            System.out.println("Invalid score!");
         }
     }
+
+  public static void setContribution (double contribution){
+    	Student.contribution = contribution;
+    }
+    public static double getContribution(){
+    	return contribution;
+    }
+   
     public String getStudentID() {
         return studentID;
     }
@@ -52,12 +65,12 @@ public class Student {
         return totalQuizScore;
     }
 
-    public void setStudentID(String id) {
-        studentID = id;
+    public void setStudentID(String studentID) {
+        this.studentID =studentID;
     }
 
-    public void setName(String sname) {
-        name = sname;
+    public void setName(String name) {
+        this.name = name;
     }
 
   
