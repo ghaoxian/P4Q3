@@ -19,29 +19,23 @@ public class test2
         Student s2 = new Student("19WMD01909","HX");
         s1.setName("Ali");
         s1.setStudentID("WWE001");
-        s1.addQuiz(9);
+        s1.addQuiz(10);
         s2.addQuiz(8);
-        
 
-        
-        s1.setContribution(20);
-        
         System.out.println("Name :"+s1.getName());
         System.out.println("Student ID :"+s1.getStudentID());
         System.out.println("Number Of Quiz Taken :"+s1.getNumOfQuizTake());
         System.out.println("Total Score :"+s1.getTotalQuizScore());
-        System.out.println("Average score :"+s1.getAverageScore());
-        System.out.println("Contribution :"+s1.getAverageScore()
-                /10* Student.getContribution()+"\n");
+        System.out.println("Average score :"+s1.getAverageScore()+"\n");
+        
         
         
         System.out.println("Name :"+s2.getName());
         System.out.println("Student ID :"+s2.getStudentID());
         System.out.println("Number Of Quiz Taken :"+s2.getNumOfQuizTake());
         System.out.println("Total Score :"+s2.getTotalQuizScore());
-        System.out.println("Average score :"+s2.getAverageScore());
-          System.out.println("Contribution :"+s2.getAverageScore()
-                  /10* Student.getContribution()+"\n");
+        System.out.println("Average score :"+s2.getAverageScore()+"\n");
+          
     }
     
 }
